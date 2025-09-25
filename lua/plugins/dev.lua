@@ -1,6 +1,16 @@
 return {
   { "voldikss/vim-floaterm" },
   {
+    "kevinhwang91/rnvimr",
+  },
+  {
+    "gelguy/wilder.nvim",
+    config = function()
+      local wilder = require("wilder")
+      wilder.setup({ modes = { ":", "/", "?" } })
+    end,
+  },
+  {
     "saghen/blink.cmp",
     optional = true,
     dependencies = { "codeium.nvim", "saghen/blink.compat" },
