@@ -88,7 +88,7 @@ map("n", "<leader>gf", "<cmd>GFiles<CR>", { desc = "Git Files", noremap = true, 
 map("n", "<leader>bd", "<cmd>Bw<CR>", { desc = "Delete Buffer", noremap = true, silent = true })
 map("n", "<leader>xf", "<cmd>NERDTreeFind<CR>", { desc = "Find in NERDTree", noremap = true, silent = true })
 
--- Symbols outline
+-- Symbols outlin
 map("v", "<leader>i", "<cmd>SymbolsOutline<CR>", { desc = "Symbols Outline", noremap = true, silent = true })
 
 -- Sourcegraph search
@@ -136,7 +136,7 @@ map(
 map("n", "gr", "<cmd>Telescope lsp_references<cr>", { desc = "References", noremap = true, silent = true })
 
 -- Additional telescope keymaps
-map("n", "<C-P>", "<cmd>Telescope find_files<cr>", { desc = "Find Files", noremap = true, silent = true })
+-- map("n", "<C-P>", "<cmd>Telescope find_files<cr>", { desc = "Find Files", noremap = true, silent = true })
 map("n", "<C-S>", "<cmd>Telescope live_grep<cr>", { desc = "Live Grep", noremap = true, silent = true })
 map("n", "<Leader>fa", "<cmd>Telescope live_grep<cr>", { desc = "Live Grep", noremap = true, silent = true })
 map(

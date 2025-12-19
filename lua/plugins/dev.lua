@@ -11,6 +11,21 @@ return {
     end,
   },
   {
+    'nvim-telescope/telescope-project.nvim',
+    dependencies = {
+      'nvim-telescope/telescope.nvim',
+    },
+  },
+  {
+    'nvim-telescope/telescope.nvim',
+    config = function()
+      require'telescope'.load_extension('project')
+    end
+  },
+  {
+    "sainnhe/edge"
+  },
+  {
     "saghen/blink.cmp",
     optional = true,
     dependencies = { "codeium.nvim", "saghen/blink.compat" },
@@ -42,6 +57,7 @@ return {
       -- or just leave it empty :)
     },
   },
+  --  { "preservim/vim-markdown", dependencies = { "godlygeek/tabular" } },
   {
     "stevearc/conform.nvim",
     optional = true,
