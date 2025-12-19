@@ -6,3 +6,27 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+--
+-- vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+--
+--vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+--  pattern = { "*" },
+--  command = "silent! wall",
+--  nested = true,
+-- })
+--
+--
+-- Reader-like defaults for Markdown buffers
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
+    vim.opt_local.list = false
+    vim.opt_local.conceallevel = 2
+    vim.opt_local.concealcursor = "nc"
+    vim.opt_local.spell = true
+    vim.opt_local.foldlevel = 99
+  end,
+})
+
